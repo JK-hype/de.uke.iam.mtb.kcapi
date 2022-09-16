@@ -1,0 +1,11 @@
+server.port=8093
+
+spring.datasource.url=jdbc:postgresql://localhost:5433/kc_pool
+spring.datasource.username=
+spring.datasource.password=
+
+## Hibernate Properties
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+# Hibernate ddl auto (create, create-drop, validate, update)
+hibernate.hbm2ddl.auto = update
