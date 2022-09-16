@@ -274,13 +274,13 @@ public class KcController {
 
         @ExceptionHandler({ EntityNotFoundException.class })
         public ResponseEntity<String> handleEntityNotFoundException() {
-                return new ResponseEntity<>("Could not find patient entity with this id", HttpStatus.BAD_REQUEST);
+                return new ResponseEntity<>(entityNotFoundErrorMessage, HttpStatus.BAD_REQUEST);
         }
 
         @ExceptionHandler({ MappingException.class })
         public ResponseEntity<String> handleMappingException() {
                 return new ResponseEntity<>(
-                                "Mapping error. Could not convert this dto. Please provide a dto according to the documentation",
+                                mappingErrorMessage,
                                 HttpStatus.BAD_REQUEST);
         }
 }
